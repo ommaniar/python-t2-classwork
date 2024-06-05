@@ -8,10 +8,15 @@
 </head>
 <body>
     <div class="container">
-        <form action="/process-get" method="get">
+        <form action="/process-get" method="post">
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">First Name</label>
-              <input type="text" class="form-control" id="fname" name="fname" aria-describedby="emailHelp">
+              <label for="exampleInputEmail1" class="form-label">User Name</label>
+              <input type="username" class="form-control" id="fname" name="username" aria-describedby="emailHelp">
+              <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">Password
+              <input type="password" class="form-control" id="fname" name="password" aria-describedby="emailHelp">
               <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
