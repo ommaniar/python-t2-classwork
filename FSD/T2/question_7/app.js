@@ -6,8 +6,11 @@ const path = require("path");
 const express = require("express");
 const app = express();
 app.use(express.urlencoded({extended:false}));
-app.use(express.static((__dirname,"./styles.css")));
-app.use(express.static((__dirname),{index:"index.html"}));
+
+app.get("/",(req,res)=>{
+    res.sendFile(__dirname+ "/lj_form.html");
+});
+app.use(express.static((__dirname)));
 app.post("/login",(req,res)=>{
     response = {
         username: req.body.username,
@@ -17,7 +20,7 @@ app.post("/login",(req,res)=>{
     if(response.username == "admin"){
         res.write(`<h1>Hello Welcome ${response.username}</h1>`);
     }else{
-        res.write("<h1 style='color:red;'>Please enter valid username</h1>");
+        res.write("<h1 style='color:red'>Please enter valid username</h1>");
     }
     res.send();
 })
