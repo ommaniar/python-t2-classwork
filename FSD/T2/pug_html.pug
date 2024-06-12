@@ -1,0 +1,46 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        //- 1
+        // Comment
+        h1 heading
+        p First Paragraph 
+        p 
+            i second paragraph
+        p 
+            | This file will
+            | not render 
+            | properly 
+        ul 
+            li Mango 
+            li Watermelon 
+        h5(style="text-transform: uppercase; color: tomato",align="center") This is heading 5
+        a(
+            href="/about"
+            target="_blank"
+        ) About
+        table(border="1px solid",style="color:tomato; width:100%")
+            tr 
+                th Name 
+                th Id
+            tr 
+                td Ezio 
+                td 1
+            tr 
+                td Edward 
+                td 2
+            tr 
+                td Shay 
+                td 3 
+        -var num = 3
+        -var emoji = "🗿"
+        -var lst = ["India","USA","UK"];
+        h4= "3 times num is "+num*3
+        h5= emoji 
+        h4= "Countrys:" + lst[0]
+        //- crete one pug file which contians a text field and an email field. by submitting the form on next page called /data submitted data should be displayed. 
+        

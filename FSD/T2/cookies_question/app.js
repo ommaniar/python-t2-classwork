@@ -18,10 +18,7 @@ app.use(express.static(__dirname,{index:"./form.html"}));
 
 app.post("/process",(req,res)=>{
     q = req.body;
-    res.cookie("fname",q.fname);
-    res.cookie("lname",q.lname);
-    res.cookie("password",q.password);
-    res.redirect("/admin");
+   
 })
 
 app.get("/admin",(req,res,next)=>{
