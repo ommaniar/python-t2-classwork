@@ -1,0 +1,25 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        form(action="/data" method="get")
+            p Name 
+            input(type="text", name="name")
+            p Email 
+            input(type="email" name="email")
+            p Branch
+            label 
+                input(type="radio",name="branch",value="CSE")
+                span CSE
+            label
+                input(type="radio",name="branch",value="CE")
+                span CE
+            label
+                input(type="radio",name="branch",value="IT")
+                span IT
+            input(type="submit", value="submit")
+            
+//- write an express js script to load a student form using pug file which contians: name, email, course (radio) CE CSE IT. Once form is submitted data should be displayed on data page using pug file in table form. 
