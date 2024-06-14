@@ -1,0 +1,20 @@
+//- /**
+//-  * write an expres js script to configure the multer and perform the following taks
+//-  * 1. Create a pug file named "file.pug". This file contains heading (h3 {uploade you cv} in red color) and Form with input type file and submit button.
+//-  * 2. Create a js file named "file.js" and link this file with pug file to browse on home page. 
+//-  * 3. After uploading a file display a message "Upload page as file.extension has been uploaded". 
+//-  * 4. Save uploaded file in directory named upload. and in thsi folder file must be stored in format of lju-file.pdf where lju is the field name.
+//-  */
+
+
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+    body 
+        h1(style="color:red")
+        form(action="/uploadPage",method="post",enctype="multipart/form-data")
+            input(type="file", name="cv" accept="pdf")
+            input(type="submit",value="submit")
